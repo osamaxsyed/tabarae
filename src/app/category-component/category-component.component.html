@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{category.name}}</mat-card-title>
+        <mat-card-subtitle>Raised ${{category.raisedAmount}} of ${{category.targetAmount}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div fxFlex>
+            <div fxLayout = "row">      
+                <div fxFlex ="70">
+                    <mat-progress-bar mode="determinate" value= {{percentageRaised}}></mat-progress-bar>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>    
+        <button mat-raised-button (click)= "donate()">Donate</button>
+    </mat-card-footer>
+</mat-card>
+
+
+
